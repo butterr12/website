@@ -1,14 +1,11 @@
-import './App.css';
-import StaticBackground from './assets/components/staticbg';
-import Overlay from './assets/components/overlaybg';
+import GameCanvas from "./assets/components/pixicanvas";
 
 function App() {
-  return (
-    <div>
-      <StaticBackground />
-    </div>
-  );
+    return (
+        <div style={{ height: "200vh" }}> {}
+            <GameCanvas />
+        </div>
+    );
 }
 
 export default App;
-
