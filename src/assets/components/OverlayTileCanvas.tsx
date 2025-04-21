@@ -15,12 +15,9 @@ const OverlayTileCanvas: React.FC = () => {
   const [clearedBackgroundTiles, setClearedBackgroundTiles] = useState<Set<string>>(new Set())
   const prevClearedBackgroundTiles = useRef<Set<string>>(new Set());
 
-  // const tileStyle = (tileKey: string) => {
-  //   if (clearedOverlayTiles.has(tileKey)) {
-  //     return 'cleared-tile'; // This class will add the 3D effect
-  //   }
-  //   return '';
-  // };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -46,7 +43,7 @@ const OverlayTileCanvas: React.FC = () => {
 
   // Overlay Layer (white tiles + black lines + blue-green gradient overlay on top)
 useEffect(() => {
-    window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
     const canvas = backgroundRef.current
     if (!canvas) return
   
