@@ -7,6 +7,13 @@ import React, { useRef, useEffect, useState } from 'react'
 const tileSize = 18
 
 const OverlayTileCanvas: React.FC = () => { 
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   const backgroundRef = useRef<HTMLCanvasElement | null>(null)
   const overlayRef = useRef<HTMLCanvasElement | null>(null)
 
@@ -14,10 +21,6 @@ const OverlayTileCanvas: React.FC = () => {
   const [clearedOverlayTiles, setClearedOverlayTiles] = useState<Set<string>>(new Set())
   const [clearedBackgroundTiles, setClearedBackgroundTiles] = useState<Set<string>>(new Set())
   const prevClearedBackgroundTiles = useRef<Set<string>>(new Set());
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []); 
 
   useEffect(() => {
     const updateDimensions = () => {
