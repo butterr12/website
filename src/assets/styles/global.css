@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    height: 300vh; 
+    background: linear-gradient(180deg, #6490f2, #75d78a); 
+    background-attachment: fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+  }

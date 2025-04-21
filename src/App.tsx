@@ -1,11 +1,14 @@
-import GameCanvas from "./assets/components/pixicanvas";
+import React from 'react'
+import './assets/styles/global.css'
+import './assets/styles/overlay.css'
+import OverlayTileCanvas from './assets/components/OverlayTileCanvas'
 
 function App() {
-    return (
-        <div style={{ height: "200vh" }}> {}
-            <GameCanvas />
-        </div>
-    );
+  return (
+    <>
+      <OverlayTileCanvas />
+    </>
+  )
 }
 
-export default App;
+export default App

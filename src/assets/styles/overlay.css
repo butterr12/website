@@ -1,0 +1,21 @@
+/* I already converted this to React so this is not needed anymore */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 300vh;
+    pointer-events: none;
+    z-index: 10;
+  
+    background-color: white; 
+    background-image: repeating-linear-gradient(
+      to bottom,
+      black 0px,
+      black 1px,
+      white 1px,
+      white 2px
+    );
+  }
+  
